@@ -1,0 +1,19 @@
+<header>
+	<div>
+		<h2>Welcome, <%= current_user.first_name %></h2>
+		<%= link_to 'New Note', new_note_path, class: 'waves-effect waves-light btn teal lighten-2' %>
+		<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect waves-light btn teal lighten-2' %> 
+	</div>
+</header>
+
+<section>
+	<% if current_user.notes.any? %>
+	  <% current_user.notes.each do |note| %>
+	    <div>
+	    	<h5><%= note.title.upcase %></h5>
+	    	<h6>(created <%= note.created_at.strftime('%c') %>)</h6>
+	    	<p><%= note.body %></p>
+	    </div>
+	  <% end %>
+	<% end %>
+</section>
