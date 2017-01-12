@@ -6,7 +6,7 @@ class NotesController < ApplicationController
   end
 
   def show
-  	@note = Note.find(params[:id])
+  	
   end
 
   def new
@@ -37,8 +37,11 @@ class NotesController < ApplicationController
   end
 
   def destroy
-  	@note.destroy
-  	redirect_to '/'
+  	if @note.destroy
+  		render 'destroy'
+  	else
+  		render '/', notice: "Note could not be deleted"
+  	end
   end
 
   private
