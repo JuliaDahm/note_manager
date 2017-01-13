@@ -1,3 +1,137 @@
 // Place all the styles related to the notes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	position: relative;
+	background: #fff url("cork_background.jpg") no-repeat;
+	background-attachment: fixed, scroll;
+}
+
+.header {
+	background: #fff url("apple_notes_background2.png") no-repeat;
+	background-size: auto, cover;
+	background-attachment: fixed, fixed;
+	padding: 50px 0 90px 0;
+	border-bottom: 10px solid #FFD839; 
+}
+
+.header h1 {
+	margin-top: 20px;
+	color: #000;
+	font-family: 'Homemade Apple';
+}
+
+.blinking-cursor {
+	font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 50px;
+  color: #2E3D48;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: black;
+  }
+}
+
+.card-section {
+	padding-top: 35px;
+}
+
+.card-row {
+	margin-left: 15%;
+	max-height: 200px;
+}
+
+.note-cards {
+	background: url("ripped_paper.png") no-repeat;
+	background-size: cover;
+	color: #5E687D;
+	padding: 20px 10px 5px 0px;
+	border-radius: 1%;	
+}
+
+.card-content {
+	padding: 40px;
+}
+
+.card-content h5 {
+	margin-bottom: 0;
+	padding-top: 10%;
+}
+
+.note-date {
+	margin-top: 5px;;
+	font-weight: 100;
+	font-size: .8em;
+}
+
+.note-body {
+	padding: 0px 30px 0 30px;
+	text-align: left;
+	font-weight: 300;
+}
+
+.card-footer {
+	border-top: 1px solid rgba(160,160,160,0.2);
+	padding: 4% 4% 7% 4%;
+}
+
+.card-button-left {
+	border-right: 1px solid rgba(160,160,160,0.2);
+}
+
+.edit-button, 
+.delete-button {
+	color: #FFAE19;
+	font-weight: 500;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+	color: #FFE4B2;
+}
