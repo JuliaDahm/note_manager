@@ -2,6 +2,7 @@ class NotesController < ApplicationController
 	before_action :note, only: [:show, :edit, :update, :destroy]
 
   def index
+  	@users = User.all
   	@notes = current_user.notes.all
   end
 
