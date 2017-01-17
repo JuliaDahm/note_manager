@@ -2,31 +2,21 @@
 	<div class="container">
 		<h1>Note Manager<span class="blinking-cursor">|</span></h1>
 		<br />
-		<%= link_to 'New Note', new_note_path, class: 'waves-effect waves-light btn teal lighten-2' %>
+		<%= link_to 'New Note', new_note_path, remote: true, class: 'waves-effect waves-light btn teal lighten-2' %>
 		<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect waves-light btn teal lighten-2' %> 
 	</div>
 </section>
 
+<div>
+	<div id="note-form" style="display:none;"></div>
+</div>
+
 <section class="card-section container">
 	<div class="row card-row">
-		<% if current_user.notes.any? %>
-		  <% current_user.notes.each do |note| %>
-		    <div id='note_<%= note.id %>' class="container note-cards col s10 l10 offset-s1 offset-l1">
-		    	<div class="card-content center">
-		    		<h5><%= note.title.upcase %></h5>
-		    		<p class="note-date">(created <%= note.created_at.strftime('%c') %>)</p>
-		    		<p class="note-body"><%= note.body %></p>
-		    	</div>
-		    	<div class="row card-footer center">
-		    		<div class="col s6 l6 card-button-left">
-		    			<%= link_to "EDIT", edit_note_path(note), class: "edit-button" %>
-		    		</div>
-		    		<div class="col s6 l6 card-button-right">
-		    			<%= link_to "DELETE", note_path(note), method: :delete, remote: true, class: "delete_note delete-button" %>
-		    		</div>
-		    	</div>
-		    </div>
-		  <% end %>
-		<% end %>
+		<div id="notes">
+			<%= render :partial => 'note' %>
+		</div>
 	</div>
 </section>
+
+

@@ -1,9 +1,11 @@
 class NotesController < ApplicationController
+	before_action :users, only: [:index, :show, :edit, :update, :destroy]
+	before_action :notes, only: [:index, :show, :edit, :update, :destroy]
 	before_action :note, only: [:show, :edit, :update, :destroy]
+	respond_to :html, :js
 
   def index
-  	@users = User.all
-  	@notes = current_user.notes.all
+
   end
 
   def show
@@ -15,43 +17,34 @@ class NotesController < ApplicationController
   end
 
   def create
-  	@note = Note.new(note_params)
-  	@note.user_id = current_user.id
-  	if @note.save
-  		flash[:success] = "Note created!"
-  		redirect_to '/'
-  	else
-  		render :new
-  	end 
+  	@note = current_user.notes.create(note_params)
   end
 
   def edit
   end
 
   def update
-  	if @note.update(note_params)
-  		redirect_to '/'
-  		flash[:success] = "Note updated!"
-  	else
-  		render :edit
-  	end
+  	@note.update_attributes(note_params)
   end
 
   def destroy
-  	if @note.destroy
-  		render 'destroy'
-  	else
-  		render '/', notice: "Note could not be deleted"
-  	end
+  	@note.destroy
   end
 
   private
     def note_params
-      params.require(:note).permit(:title, :date, :body)
+      params.require(:note).permit(:title, :body)
     end
-
 
     def note
       @note = current_user.notes.find(params[:id])
     end
+
+    def notes
+    	@notes = current_user.notes.all
+    end 
+
+    def users
+    	@users = User.all
+    end 
 end

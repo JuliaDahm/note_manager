@@ -1,0 +1,15 @@
+<div class = "row"> 
+  <div class = "col s8 offset-s2 col m4 offset-m4 col l4 offset-l4">
+ 		<%= form_for @note, remote: true do |f| %>
+ 		 
+ 		  <%= f.label :title %>
+ 		  <%= f.text_field :title, required: true  %>
+
+ 		  <%= f.label :body %>
+ 		  <%= f.text_area :body, required: true %>
+ 		  
+ 		  <%= f.submit "Submit" %>
+ 		<% end %>
+	</div>
+</div>
+

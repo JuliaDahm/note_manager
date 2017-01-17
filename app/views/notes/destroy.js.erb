@@ -1,3 +1,4 @@
-$(document).ready(function(){
-  $('div#note_<%= @note.id %>').fadeOut('slow');
+$('.delete_note').bind('ajax:success', function() {
+    $(this).closest('.note-cards').fadeOut('350');
 });
+$('#notes').html("<%= j (render @notes) %>");
