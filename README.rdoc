@@ -5,18 +5,15 @@
 
 
 ******** TECH STACK ************
-
 AJAX, jQuery, JS, HTML, SASS
 
 
 ******** DEPENDENTS ************
-
 'materialize-sass'
 'devise', '~> 3.4.0'
 
 
 ********* DATABASE *************
-
 Postgresql 
 
 
