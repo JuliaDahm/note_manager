@@ -15,3 +15,8 @@ Note_Manager does exactly that; manages notes. This project uses AJAX for the sa
 
 **************************
 
+In order to demo, download the zip and start up a Rails server: 
+
+<code>
+Rails s 
+</code>
