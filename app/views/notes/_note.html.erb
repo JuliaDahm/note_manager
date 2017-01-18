@@ -1,6 +1,7 @@
+<div class="new-note"></div>
 <% if current_user.notes.any? %>
-  <% current_user.notes.each do |note| %>
-    <div id='note_<%= note.id %>' class="container note-cards col s10 l10 offset-s1 offset-l1">
+  <% current_user.notes.order("created_at DESC").each do |note| %>
+    <div id='<%= note.id %>' class="container note-cards col s10 l10 offset-s1 offset-l1">
     	<div class="card-content center">
     		<h5><%= note.title.upcase %></h5>
     		<p class="note-date">(created <%= note.created_at.strftime('%c') %>)</p>
@@ -11,7 +12,7 @@
     			<%= link_to "EDIT", edit_note_path(note), remote: true, class: "edit-button" %>
     		</div>
     		<div class="col s6 l6 card-button-right">
-    			<%= link_to "DELETE", note_path(note), remote: true, method: :delete,  data: { confirm: 'Are you sure you want to delete this note?' }, class: "delete_note" %>
+    			<%= link_to "DELETE", note_path(note), remote: true, method: :delete,  data: { confirm: 'Are you sure you want to delete this note?' }, class: "delete-button" %>
     		</div>
     	</div>
     </div>
