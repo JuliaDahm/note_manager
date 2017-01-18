@@ -1,22 +1,24 @@
 == README
 
 
-* Ruby Version 2.2.2
+****** RUBY VERSION 2.2.2 ******
 
-Tech Stack 
-==============
+
+******** TECH STACK ************
+
 AJAX, jQuery, JS, HTML, SASS
 
 
-* Dependents 
-==============
+******** DEPENDENTS ************
+
 'materialize-sass'
 'devise', '~> 3.4.0'
 
 
-* Database
-==============
+********* DATABASE *************
+
 Postgresql 
+
 
 
 Note_Manager does exactly that; manages notes. This project uses AJAX for the sake of ease and speed.
