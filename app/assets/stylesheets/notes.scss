@@ -1,17 +1,26 @@
-// Place all the styles related to the notes controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 body {
 	position: relative;
 	background: #fff url("cork_background.jpg") no-repeat;
 	background-attachment: fixed, scroll;
 }
 
+textarea {
+	height: 180px;
+	max-width: 170px;
+	max-height: 300px;
+}
+
+label {
+	font-size: 1em;
+	font-weight: 500;
+	color: #000;
+}
+
 .header {
-	background: #fff url("apple_notes_background2.png") no-repeat;
+	background: #fff url("orange-coffee.jpg") no-repeat;
 	background-size: auto, cover;
 	background-attachment: fixed, fixed;
-	padding: 50px 0 90px 0;
+	padding: 70px 0 90px 0;
 	border-bottom: 10px solid #FFD839; 
 }
 
@@ -92,7 +101,6 @@ body {
 	background-size: cover;
 	color: #5E687D;
 	padding: 20px 10px 5px 0px;
-	border-radius: 1%;	
 }
 
 .card-content {
@@ -101,7 +109,11 @@ body {
 
 .card-content h5 {
 	margin-bottom: 0;
-	padding-top: 10%;
+	padding-top: 12%;
+}
+
+#note-title {
+	max-width: 350px;
 }
 
 .note-date {
@@ -111,14 +123,14 @@ body {
 }
 
 .note-body {
-	padding: 0px 30px 0 30px;
+	padding: 0px 80px 0 80px;
 	text-align: left;
 	font-weight: 300;
 }
 
 .card-footer {
 	border-top: 1px solid rgba(160,160,160,0.2);
-	padding: 4% 4% 7% 4%;
+	padding: 4% 4% 10% 4%;
 }
 
 .card-button-left {
@@ -135,3 +147,39 @@ body {
 .delete-button:hover {
 	color: #FFE4B2;
 }
+
+body .form-column {
+	margin: 130px 0 70px 0;
+	text-align: center;
+}
+
+#note_title {
+	width: 170px;
+	padding: 8px;
+}
+
+.form-body {
+	margin-top: 20px;
+}
+
+// .form-actions {
+// 	margin-top: 45px;
+// }
+
+body .form-buttons {
+	letter-spacing: 0;
+	height: 28px;
+	line-height: 26px;
+	font-size: 13px;
+	margin: 5px;
+}
+
+body .new-note {
+	background: #fff url("book6.jpg") no-repeat;
+	background-size: cover;
+	border-radius: 5%;
+	padding: 0;
+}
+
+
+

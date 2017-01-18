@@ -1,28 +1,22 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+* Ruby Version 2.2.2
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Tech Stack 
+==============
+AJAX, jQuery, JS, HTML, SASS
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Dependents 
+==============
+'materialize-sass'
+'devise', '~> 3.4.0'
+
+
+* Database
+==============
+Postgresql 
+
+
+Note_Manager does exactly that; manages notes. This project uses AJAX for the sake of ease and speed.

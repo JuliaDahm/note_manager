@@ -1,0 +1,24 @@
+.devise-container {
+	background: #fff url("apple_notes_background.png") no-repeat;
+	background-size: auto;
+	border: 8px solid #FF982F;
+	box-shadow: 0 4px 7px 0 rgba(0, 0, 0, 0.16), 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+	margin-top: 60px;
+}
+
+.devise-container h2 {
+	font-family: 'Homemade Apple';
+	padding-bottom: 40px;
+}
+
+.devise-content {
+	padding: 5%;
+}
+
+.devise-content .btn {
+	margin: 20px;
+}
+
+#user_password {
+	margin-bottom: 40px;
+}

@@ -1,4 +1,4 @@
-<div class="new-note"></div>
+<div class="center container new-note"></div>
 <% if current_user.notes.any? %>
   <% current_user.notes.order("created_at DESC").each do |note| %>
     <div id='<%= note.id %>' class="container note-cards col s10 l10 offset-s1 offset-l1">
