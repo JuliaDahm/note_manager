@@ -5,10 +5,13 @@ RUBY VERSION: 2.2.2
 
 TECH STACK:  AJAX, jQuery, JS, HTML, SASS
 
-DEPENDENTS: 'materialize-sass', 'devise', '~> 3.4.0'
+DEPENDENCIES: 'materialize-sass', 'devise', '~> 3.4.0'
 
 DATABASE:  Postgresql 
 
 *************************
 
 Note_Manager does exactly that; manages notes. This project uses AJAX for the sake of ease and speed.
+
+**************************
+
